@@ -1,0 +1,83 @@
+{
+  "extends": ["eslint:all", "plugin:react/all", "idiomatic"],
+  "parserOptions": {
+    "sourceType": "module",
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      { "SwitchCase": 1 }
+    ],
+    "no-console": ["error", { "allow": ["error"] }],
+    "semi": ["error", "never"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "one-var": 0,
+    "react/jsx-indent": [2, 2],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-set-state": 0,
+    "react/jsx-curly-spacing": [2, "always", {"spacing": {
+      "objectLiterals": "never"
+    }}],
+    "react/jsx-boolean-value": 0,
+    "react/jsx-no-bind": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-handler-names": 0,
+    "react/forbid-component-props": 0,
+    "react/require-optimization": 0,
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "globals": {
+    "$": false,
+    "afterEach": false,
+    "alert": false,
+    "API_URL": false,
+    "atob": false,
+    "beforeEach": false,
+    "CHAVE_CRIPTO_ADYEN": false,
+    "confirm": false,
+    "DEBUG": false,
+    "describe": false,
+    "document": false,
+    "expect": false,
+    "expectMissingProp": false,
+    "FastClick": false,
+    "fbq": false,
+    "fetch": false,
+    "ga": false,
+    "GOOGLE_ANALYTICS_ID": false,
+    "Headers": false,
+    "INTERCOM_ACCESS_TOKEN": false,
+    "INTERCOM_ID": false,
+    "Intercom": false,
+    "it": false,
+    "localStorage": false,
+    "mount": false,
+    "OEF_VERSION": false,
+    "PORTAL_URL": false,
+    "RECAPTCHA_SITE_KEY": false,
+    "shallow": false,
+    "sinon": false,
+    "stubConsoleError": false,
+    "Swiper": false,
+    "test": false,
+    "twq": false,
+    "URL_INTERCOM": false,
+    "window": false,
+    "YT": false,
+    "render": false,
+    "LOCAL": false,
+    "grecaptcha": false,
+    "RECAPTCHA_SITE_KEY_FAWKES": false,
+    "__voxusTrackConversion": false,
+  }
+}

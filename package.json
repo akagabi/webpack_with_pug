@@ -1,0 +1,22 @@
+{
+  "name": "tag-livros-website",
+  "version": "3.0.0",
+  "description": "site tag experiências literárias",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "build:prod": "./node_modules/.bin/webpack -p",
+    "dev": "./node_modules/.bin/webpack-dev-server",
+    "watch": "./node_modules/.bin/webpack --watch"
+  },
+  "author": "Gabriel Bueno <gabriel.bueno@taglivros.com.br>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
