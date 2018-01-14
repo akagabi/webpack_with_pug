@@ -1,4 +1,6 @@
-const { resolve } = require( 'path' );
+const { resolve, join } = require( 'path' );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' )
+const HtmlPugWebpackPlugin = require('html-webpack-template-pug') 
 
 const plugins = {
     CleanWebpackPlugin: require( 'clean-webpack-plugin' )
@@ -28,10 +30,14 @@ const config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [ 'es6' ]
+                        presets: [ 'env' ]
                     }
                 }
             },
+            {
+                test: /\.pug$/,
+                loaders: ['file-loader?name=[path][name].html', 'pug-html-loader?pretty&exports=false']
+            }
         ]
     },
     plugins: [
