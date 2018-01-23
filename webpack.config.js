@@ -1,9 +1,13 @@
 const { resolve, join } = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' )
-const HtmlPugWebpackPlugin = require('html-webpack-template-pug') 
+const HtmlPugWebpackPlugin = require( 'html-webpack-template-pug' ) 
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' )
 
 const plugins = {
-    CleanWebpackPlugin: require( 'clean-webpack-plugin' )
+    CleanWebpackPlugin: require( 'clean-webpack-plugin' ),
+    extractSass: new ExtractTextPlugin( {
+        filename: "main.css"
+    } )
 }
 
 const config = {
@@ -37,11 +41,16 @@ const config = {
             {
                 test: /\.pug$/,
                 loaders: ['file-loader?name=[path][name].html', 'pug-html-loader?pretty&exports=false']
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
             }
         ]
     },
     plugins: [
-        new plugins.CleanWebpackPlugin( [ 'dist' ] )
+        new plugins.CleanWebpackPlugin( [ 'dist' ] ),
+        plugins.extractSass
     ]
 }
 
